@@ -16,3 +16,15 @@ function displayPosts(posts) {
         postList.appendChild(li);
     });
 }
+
+//fetch
+async function post() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+        const data = await response.json();
+        displayPosts(data);
+    } catch(error) {
+        console.error('Error fetching posts:', error);
+    };
+    
+}
