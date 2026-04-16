@@ -28,3 +28,5 @@ async function post() {
     };
     
 }
+
+console.log(post());
